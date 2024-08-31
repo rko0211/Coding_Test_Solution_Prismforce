@@ -3,9 +3,6 @@
 </h1>
 
 
-
-## Chakravyuha Crossing Algorithm
-
 ## Table of Contents
 1. [Problem Statement](#problem-statement)
 2. [Algorithm Explanation](#algorithm-explanation)
@@ -170,5 +167,5 @@ The main function `canAbhimanyuCross` accepts parameters to define the initial p
 
 1. **Clone the Repository**:
    ```bash
-   https://github.com/rko0211/Coding_Test_Solution_Prismforce.git
+   git clone https://github.com/rko0211/Coding_Test_Solution_Prismforce.git
    cd chakravyuha-crossing
