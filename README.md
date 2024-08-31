@@ -147,7 +147,7 @@ The `canAbhimanyuCross` function is designed to determine if Abhimanyu can succe
 - **Skips**: 2
 - **Recharges**: 5
 
-**Result**: Can Abhimanyu cross the Chakravyuha? No.
+**Result**: Can Abhimanyu cross the Chakravyuha?  No.
 
 ### Test Case 2
 
@@ -156,7 +156,13 @@ The `canAbhimanyuCross` function is designed to determine if Abhimanyu can succe
 - **Skips**: 4
 - **Recharges**: 10
 
-**Result**: Can Abhimanyu cross the Chakravyuha? Yes.
+**Result**: Can Abhimanyu cross the Chakravyuha?  Yes.
+
+
+## Output Image
+![test](https://github.com/user-attachments/assets/afe225f0-cfe5-4285-a5e0-0db7115207d8)
+
+
 
 ## Conclusion
 
