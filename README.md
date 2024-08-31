@@ -168,4 +168,4 @@ The main function `canAbhimanyuCross` accepts parameters to define the initial p
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/rko0211/Coding_Test_Solution_Prismforce.git
-   cd chakravyuha-crossing
+   cd Coding_Test_Solution_Prismforce
