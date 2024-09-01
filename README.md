@@ -64,79 +64,75 @@ The `canAbhimanyuCross` function is designed to determine if Abhimanyu can succe
 
     Iterate Over Each Circle: Loop through each circle's index i from 0 to 10.
 
-    Special Enemies (K3 and K7 at indices 2 and 6):
-        Case: Enemy Power > Initial Power:
+   - Special Enemies (K3 and K7 at indices 2 and 6):
+       - Case: Enemy Power > Initial Power:
 
-            If the current enemyPowers[i] is greater than initialPower:
+          - Check Skipping Availability: If skipLeft is at least 2:
+               Decrement skipLeft by 2 to skip the current and next circle.
+               Increment i by 1 to move past the next circle.
 
-                Check Skipping Availability: If skipLeft is at least 2:
-                    Decrement skipLeft by 2 to skip the current and next circle.
-                    Increment i by 1 to move past the next circle.
+          - Skipping Not Available: If skipLeft is less than 2, return false because Abhimanyu can't skip two circles.
 
-                Skipping Not Available: If skipLeft is less than 2, return false because Abhimanyu can't skip two circles.
+       - Case: Enemy Power ≤ Initial Power:
 
-        Case: Enemy Power ≤ Initial Power:
 
-            If the current enemyPowers[i] is less than or equal to initialPower:
+           - Check Current Power Against Enemy Power:
 
-                Check Current Power Against Enemy Power:
+               - If currentPower is less than the enemyPowers[i]:
 
-                    If currentPower is less than the enemyPowers[i]:
+                   - Recharge Option: If rechargeLeft is available, recharge to initialPower and decrement rechargeLeft by 1.
 
-                        Recharge Option: If rechargeLeft is available, recharge to initialPower and decrement rechargeLeft by 1.
+                   - Skipping Option: If rechargeLeft is not available but skipLeft is at least 2, decrement skipLeft by 2 and skip the next circle.
 
-                        Skipping Option: If rechargeLeft is not available but skipLeft is at least 2, decrement skipLeft by 2 and skip the next circle.
+                   - No Options Left: If neither option is available, return false.
 
-                        No Options Left: If neither option is available, return false.
+           - Regeneration of Special Enemy:
 
-                Regeneration of Special Enemy:
+               - Compute the regenerated power of the special enemy (Regeneratedpower_of_special_enemy = enemyPowers[i] / 2).
+                Decrease currentPower by this regenerated power.
 
-                    Compute the regenerated power of the special enemy (Regeneratedpower_of_special_enemy = enemyPowers[i] / 2).
-                    Decrease currentPower by this regenerated power.
+               - Post-Regeneration Check:
 
-                    Post-Regeneration Check:
+                   - If currentPower is still less than the enemyPowers[i]:
 
-                        If currentPower is still less than the enemyPowers[i]:
+                       - Recharge Option: If rechargeLeft is available, recharge and decrement rechargeLeft.
 
-                            Recharge Option: If rechargeLeft is available, recharge and decrement rechargeLeft.
+                       - Skipping Option: If rechargeLeft is not available but skipLeft is at least 2, adjust currentPower by adding back the regenerated power, decrement skipLeft by 2, and increment i to skip the next circle.
 
-                            Skipping Option: If rechargeLeft is not available but skipLeft is at least 2, adjust currentPower by adding back the regenerated power, decrement skipLeft by 2, and increment i to skip the next circle.
+                       - No Options Left: If neither option is available, return false.
 
-                            No Options Left: If neither option is available, return false.
+           - After considering all options, reduce currentPower by the enemyPowers[i].
 
-                After considering all options, reduce currentPower by the enemyPowers[i].
+   - Normal Enemies(K1, K2, K4, K5, K6, K8, K9, K10, K11):
 
-    Normal Enemies:
-
-        Case: Enemy Power > Initial Power:
+       - Case: Enemy Power > Initial Power:
 
             If enemyPowers[i] is greater than initialPower:
 
-                Skip if Possible: If skipLeft is available, decrement skipLeft by 1.
+           - Skip if Possible: If skipLeft is available, decrement skipLeft by 1.
 
-                Cannot Skip: If skipLeft is 0, return false.
+           - Cannot Skip: If skipLeft is 0, return false.
 
-        Case: Enemy Power ≤ Initial Power:
+       - Case: Enemy Power ≤ Initial Power:
 
-            If enemyPowers[i] is less than or equal to initialPower:
 
-                Check Current Power:
+           - Check Current Power:
 
-                    If currentPower is less than the enemyPowers[i]:
+               - If currentPower is less than the enemyPowers[i]:
 
-                        Recharge Option: If rechargeLeft is available, recharge to initialPower and decrement rechargeLeft by 1.
+                   - Recharge Option: If rechargeLeft is available, recharge to initialPower and decrement rechargeLeft by 1.
 
-                        Skipping Option: If rechargeLeft is not available but skipLeft is available, decrement skipLeft by 1.
+                   - Skipping Option: If rechargeLeft is not available but skipLeft is available, decrement skipLeft by 1.
 
-                        No Options Left: If neither option is available, return false.
+                   - No Options Left: If neither option is available, return false.
 
-                After considering all options, reduce currentPower by the enemyPowers[i].
+           - After considering all options, reduce currentPower by the enemyPowers[i].
 
 **V. Final Check:**
 
-    Completion Check: If all circles are processed without returning false, then Abhimanyu can cross all circles.
+   - Completion Check: If all circles are processed without returning false, then Abhimanyu can cross all circles.
 
-    Result: Return true.
+   - Result: Return true.
 
 
 ## Example Test Cases
