@@ -7,7 +7,8 @@
 1. [Problem Statement](#problem-statement)
 2. [Algorithm Explanation](#algorithm-explanation)
 3. [Example Test Cases](#example-test-cases)
-4. [How to Run the Code](#how-to-run-the-code)
+4. [Algorithm Performance](#algorithm-performance)
+5. [How to Run the Code](#how-to-run-the-code)
 
 ## Problem Statement
 - Imagine Abhimanyu in Chakravyuha. There are 11 circles in the Chakravyuha surrounded by different enemies. Abhimanyu is located in the innermost circle and has to cross all the 11 circles to reach Pandavas army back.
@@ -162,6 +163,10 @@ The `canAbhimanyuCross` function is designed to determine if Abhimanyu can succe
 ## Output Image
 ![test](https://github.com/user-attachments/assets/afe225f0-cfe5-4285-a5e0-0db7115207d8)
 
+## Algorithm Performance
+### Time Complexity: O(1), as the algorithm performs a constant number of iterations (11)
+
+### Space Complexity: O(1), as no additional auxiliary space is required
 
 
 ## Conclusion
